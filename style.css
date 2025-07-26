@@ -1,0 +1,196 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+}
+
+::selection {
+    background-color: #177245;
+    color: white;
+}
+
+/* Container and Menu */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.menu {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Form */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.box {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 1.5px solid white;
+    text-align: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.box:focus {
+    border-color: #2072AF;
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 0;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-add {
+    background-color: #177245;
+    color: white;
+    border-color: #177245;
+    grid-column: 1 / 3;
+    margin-top: 20px;
+}
+
+.btn-update {
+    background-color: #2072AF;
+    color: white;
+    border-color: #2072AF;
+}
+
+.btn-delete {
+    background-color: #C51E3A;
+    color: white;
+    border-color: #C51E3A;
+}
+
+.btn-search {
+    background: linear-gradient(to right, #fc466b, #3f5efb);
+    color: white;
+    border: none;
+}
+
+/* Toggle Button */
+.btn-toggle {
+    margin-top: 20px;
+    background-color: #555;
+    color: white;
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: #333;
+}
+
+/* Table container */
+.tbl {
+    margin-top: 40px;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 28px;
+    padding: 20px 0;
+    color: #333;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+thead tr th {
+    background-color: #2072AF;
+    color: white;
+    padding: 12px;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6f0ff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #feb47b;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr td {
+    text-align: center;
+    padding: 12px 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: #123;
+}
+
+/* Private column style */
+.private-col {
+    width: 100px;
+}
+
+/* Message styles */
+.success {
+    color: green;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-top: 15px;
+    font-weight: bold;
+}
